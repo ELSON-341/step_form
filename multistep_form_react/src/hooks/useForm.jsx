@@ -15,8 +15,8 @@ export function userForm(steps) {
     return {
         currentStep,
         currentComponents: steps[currentStep],
-        chagesStep
+        chagesStep,
+        isLastStep: currentStep + 1 === steps.length ? true : false,
+        isFirstStep: currentStep === 0 ? true : false
     }
-
 }
-
