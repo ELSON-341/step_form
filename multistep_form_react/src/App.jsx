@@ -5,15 +5,15 @@ import ReviewForm from './components/ReviewForm'
 import Thanks from './components/Thanks'
 
 // Hooks
-import { userForm } from './hooks/userForm'
+import { userForm } from './hooks/useForm'
 
 import './App.css'
-const formComponents = [<UserForm/>, <ReviewForm/>, <Thanks/>]
-
-const [currentStep, currentComponents] = userForm(formComponents)
 
 function App() {
+  const formComponents = [<UserForm/>, <ReviewForm/>, <Thanks/>]
 
+  const {currentStep, currentComponents, chagesStep} = userForm(formComponents)
+  
   return (
     <>
       <header className="header">
@@ -24,10 +24,10 @@ function App() {
       </header>
       <div className="form-container">
         <p>etapas</p>
-        <form>
-          <div className="inputs-container">{currentComponents}</div>
+        <form onSubmit={(e) => chagesStep(currentStep + 1, e)}>
+            <div className="inputs-container">{currentComponents}</div>
           <div className="actions">
-            <button type='button'>
+            <button type='button' onClick={() => chagesStep(currentStep - 1)}>
               <span>Valtar</span>
               <GrFormPrevious />
             </button>

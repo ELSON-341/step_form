@@ -1,8 +1,8 @@
 
-const userForm = () => {
+const UserForm = () => {
   return (
-    <div>UserForm</div>
+    <div>User Form</div>
   )
 }
 
-export default userForm
+export default UserForm
