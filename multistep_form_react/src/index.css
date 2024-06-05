@@ -12,7 +12,10 @@ p {
   color: #777;
 }
 
-body {
-  /* background-color: black; */
-  background-image: url('assets/');
+html ,body {
+  background-color: black;
+  background: url('assets/bg.svg') no-repeat; 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }

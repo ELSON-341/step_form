@@ -2,6 +2,7 @@
 import UserForm from './components/userForm'
 import ReviewForm from './components/ReviewForm'
 import Thanks from './components/Thanks'
+import Steps from './components/Steps'
 
 // icons
 import {GrFormNext, GrFormPrevious} from 'react-icons/gr'
@@ -27,7 +28,7 @@ function App() {
           </p>
         </header>
         <div className="form-container">
-          <p>etapas</p>
+          <Steps currentStep={currentStep}/>
           <form onSubmit={(e) => chagesStep(currentStep + 1, e)}>
               <div className="inputs-container">{currentComponents}</div>
             <div className="actions">

@@ -1,5 +1,5 @@
 .app {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 /* Cabeçalho */
@@ -10,15 +10,21 @@
 
 .header h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
+    color: white;
+}
+
+.header p {
+    color: white;
 }
 
 /* forms */
 .form-container {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: white;
     padding: 1.5rem;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 1px;
     }
 
