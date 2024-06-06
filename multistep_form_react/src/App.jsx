@@ -10,11 +10,30 @@ import { FiSend } from 'react-icons/fi'
 
 // Hooks
 import { userForm } from './hooks/useForm'
+import { useState } from 'react' 
 
 import './App.css'
 
+const formTemplete = {
+  name: '',
+  email: '',
+  review: '',
+  comment: ''
+}
+
 function App() {
-  const formComponents = [<UserForm/>, <ReviewForm/>, <Thanks/>]
+  const [data, setData] = useState(formTemplete)
+
+  const updeteFieldHandler = (key, value) => {
+    setData((prev => {
+      return {...prev, [key]: value}
+    }))
+  }
+  
+  const formComponents = [
+  <UserForm data={data} updeteFieldHandler={updeteFieldHandler}/>,
+  <ReviewForm data={data} updeteFieldHandler={updeteFieldHandler}/>,
+  <Thanks data={data}/>]
 
   const {currentStep, currentComponents, chagesStep, isLastStep, isFirstStep} = userForm(formComponents)
   
@@ -22,7 +41,7 @@ function App() {
     <>
       <div className="app">
         <header className="header">
-          <h2>Deixe sua avliação</h2>
+          <h2>Deixe sua avaliação</h2>
           <p>
             Fimcamos felizes com a sua compra, utilize o formulário abaixo para avaliar o produto
           </p>
