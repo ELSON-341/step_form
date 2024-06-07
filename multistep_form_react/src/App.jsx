@@ -24,15 +24,15 @@ const formTemplete = {
 function App() {
   const [data, setData] = useState(formTemplete)
 
-  const updeteFieldHandler = (key, value) => {
-    setData((prev => {
+  const updateFieldHandler = (key, value) => {
+    setData((prev) => {
       return {...prev, [key]: value}
-    }))
+    })
   }
   
   const formComponents = [
-  <UserForm data={data} updeteFieldHandler={updeteFieldHandler}/>,
-  <ReviewForm data={data} updeteFieldHandler={updeteFieldHandler}/>,
+  <UserForm data={data} updateFieldHandler={updateFieldHandler}/>,
+  <ReviewForm data={data} updateFieldHandler={updateFieldHandler}/>,
   <Thanks data={data}/>]
 
   const {currentStep, currentComponents, chagesStep, isLastStep, isFirstStep} = userForm(formComponents)

@@ -3,7 +3,7 @@
 }
 
 .Thanks-container h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .Thanks-container p {
@@ -25,5 +25,10 @@
 
 .review-data span {
     font-weight: bold;
+}
+
+.review-data svg {
+    text-align: left;
+    font-size: 1rem;
 }
 

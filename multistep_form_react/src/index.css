@@ -20,3 +20,17 @@ html ,body {
   background-attachment: fixed;
 }
 
+@media(max-width: 400px) {
+  .steps{
+    width: 100px;
+  }
+
+  .step {
+    width: 55px;
+    font-size: 12px;
+  }
+
+  .steps::after {
+    width: 150px;
+  }
+}

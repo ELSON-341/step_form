@@ -5,7 +5,7 @@
 /* Cabeçalho */
 .header {
     text-align: center;
-    margin: 2rem;
+    margin-bottom: 1rem;
 }
 
 .header h2 {
@@ -26,6 +26,7 @@
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 1px;
+    overflow: hidden;
     }
 
 .form-container form {
